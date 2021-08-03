@@ -31,6 +31,10 @@ HEADERS  += mainwindow.h \
 	maxrects.h
 FORMS    += mainwindow.ui
 
-QMAKE_CXXFLAGS += -Wextra -Werror
+# comment this line for MSVC：Visual C++ does not support "-Wextra" and "-Werror"
+#QMAKE_CXXFLAGS += -Wextra -Werror
+
+# add this line for MSVC to support consle output
+CONFIG +=console
 
 TRANSLATIONS += tile_ru.ts
