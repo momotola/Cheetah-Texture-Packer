@@ -37,16 +37,20 @@ void ImagePacker::sort()
     switch(sortOrder)
     {
     case 1:
-        qSort(images.begin(), images.end(), ImageCompareByWidth);
+        //qSort(images.begin(), images.end(), ImageCompareByWidth);
+        std::sort(images.begin(), images.end(), ImageCompareByWidth);
         break;
     case 2:
-        qSort(images.begin(), images.end(), ImageCompareByHeight);
+        //qSort(images.begin(), images.end(), ImageCompareByHeight);
+        std::sort(images.begin(), images.end(), ImageCompareByHeight);
         break;
     case 3:
-        qSort(images.begin(), images.end(), ImageCompareByArea);
+        //qSort(images.begin(), images.end(), ImageCompareByArea);
+        std::sort(images.begin(), images.end(), ImageCompareByArea);
         break;
     case 4:
-        qSort(images.begin(), images.end(), ImageCompareByMax);
+        //qSort(images.begin(), images.end(), ImageCompareByMax);
+        std::sort(images.begin(), images.end(), ImageCompareByMax);
         break;
     }
 }

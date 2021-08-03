@@ -243,7 +243,8 @@ void ImagePacker::addItem(const QImage &img, void *data, QString path)
     {
         return;
     }
-    i.hash = rc_crc32(0, img.bits(), img.byteCount());
+    //i.hash = rc_crc32(0, img.bits(), img.byteCount());
+    i.hash = rc_crc32(0, img.bits(), img.sizeInBytes());
     i.crop = crop(img);
     i.size = img.size();
     i.id = data;
